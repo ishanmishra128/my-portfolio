@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
 import { projects } from "../data/projects.js";
+import portrait from "../assets/ishan.png";
 ---
 <BaseLayout>
   <section class="hero page-shell">
@@ -18,6 +20,9 @@ import { projects } from "../data/projects.js";
         </div>
       </div>
       <aside class="hero-aside" aria-label="Areas of focus">
+        <figure class="hero-portrait">
+          <Image src={portrait} alt="Portrait of Ishan Mishra" width={480} height={240} loading="eager" />
+        </figure>
         <p class="eyebrow">CURRENT INTERESTS</p>
         <ul class="focus-list">
           <li><span>01</span> Data Engineering</li>
